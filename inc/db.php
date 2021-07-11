@@ -7,7 +7,7 @@ class db {
     static $echo_error = true;
     static $show_sql = false;
     public function __construct( ) {
-        self::$db = new PDO( 'mysql:host=' . DB_HOST . ';dbname=' . DB_NAME . ';charset=utf8', DB_USER, DB_PASS );
+        self::$db = new PDO( 'mysql:host=' . DB_HOST . ';dbname=' . DB_NAME. ';charset=utf8',DB_USER, "" );
         self::$db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
         self::$db->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
     }

@@ -84,7 +84,7 @@ namespace TPV;
         // No session --> login page
         include_once $render_page;
     } else {
-        ?>
+    ?>
         <div class="wrapper">
             <!-- header -->
             <header class="main-header">
@@ -110,7 +110,7 @@ namespace TPV;
                             <?php
                             foreach ($menu_top as $name => $menu) {
                                 if (in_array($user['rol'], $menu['permissions'])) {
-                                    ?>
+                            ?>
                                     <li class="dropdown user user-menu">
                                         <a href="<?php echo $menu['url'] ?>">
                                             <i class="<?php echo $menu['icon'] ?>"></i> &nbsp;
@@ -137,7 +137,7 @@ namespace TPV;
                         <ul class="nav navbar-nav">
                             <?php
                             if ($_GET['page'] == 'tpv') {
-                                ?>
+                            ?>
                                 <li class="user user-menu">
                                     <a id="btn-fullscreen" class="enterFullScreen">
                                         <i class="fa fa-arrows-alt"></i>
@@ -148,7 +148,7 @@ namespace TPV;
                             ?>
                             <!-- User Account: style can be found in dropdown.less -->
                             <li class="dropdown user user-menu">
-                                <a href="/logout"><i class="fa fa-sign-out"></i> Salir</a>
+                                <a href="<?php echo $site_url ?>logout"><i class="fa fa-sign-out"></i> Salir</a>
                             </li>
                         </ul>
                     </div>
@@ -178,7 +178,7 @@ namespace TPV;
                         </li>
                         <?php
                         if ($user['rol'] == 'ADMIN') {
-                            ?>
+                        ?>
                             <li class="treeview">
                                 <a href="#">
                                     <i class="fa fa-database"></i> <span>Administración</span>
@@ -274,7 +274,7 @@ namespace TPV;
     <script src="<?php echo $site_assets ?>plugins/toastr/toastr.min.js"></script>
     <?php
     if (isset($datatables)) {
-        ?>
+    ?>
         <!-- DataTables -->
         <script src="<?php echo $site_js ?>datatables.net/js/jquery.dataTables.min.js"></script>
         <script src="<?php echo $site_js ?>datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
